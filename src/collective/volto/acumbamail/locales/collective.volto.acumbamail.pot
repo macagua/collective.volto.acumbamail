@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-05-25 17:12+0000\n"
+"POT-Creation-Date: 2025-11-07 18:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,3 +16,51 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.volto.acumbamail\n"
+
+#: collective/volto/acumbamail/interfaces.py:26
+msgid "Acumbamail API Key"
+msgstr ""
+
+#: collective/volto/acumbamail/controlpanels/controlpanel.py:7
+msgid "Acumbamail Configuration"
+msgstr ""
+
+#: collective/volto/acumbamail/interfaces.py:32
+msgid "Acumbamail List ID"
+msgstr ""
+
+#: collective/volto/acumbamail/profiles/default/controlpanel.xml
+msgid "Acumbamail Settings"
+msgstr ""
+
+#: collective/volto/acumbamail/profiles.zcml:13
+msgid "Acumbamail integration with Plone: Install"
+msgstr ""
+
+#: collective/volto/acumbamail/profiles.zcml:21
+msgid "Acumbamail integration with Plone: Uninstall"
+msgstr ""
+
+#: collective/volto/acumbamail/controlpanels/controlpanel.py:8
+msgid "Define the credentials and connection parameters for Acumbamail."
+msgstr ""
+
+#: collective/volto/acumbamail/interfaces.py:21
+msgid "General settings"
+msgstr ""
+
+#: collective/volto/acumbamail/interfaces.py:33
+msgid "Numeric identifier of the list where subscribers will be added."
+msgstr ""
+
+#: collective/volto/acumbamail/profiles.zcml:13
+msgid "Package to configure a new Acumbamail integration with Plone site"
+msgstr ""
+
+#: collective/volto/acumbamail/profiles.zcml:21
+msgid "Uninstall Acumbamail integration with Plone setup."
+msgstr ""
+
+#: collective/volto/acumbamail/interfaces.py:27
+msgid "Your personal Acumbamail token (https://acumbamail.com/api/)"
+msgstr ""

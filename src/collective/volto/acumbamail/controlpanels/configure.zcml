@@ -6,5 +6,12 @@
     >
 
   <!-- -*- extra stuff goes here -*- -->
+  <browser:page
+      name="acumbamail-settings"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      class=".controlpanel.AcumbamailControlPanel"
+      permission="volto.acumbamail.ManageAcumbamailSettings"
+      layer="collective.volto.acumbamail.interfaces.ICollectiveVoltoAcumbamailLayer"
+      />
 
 </configure>

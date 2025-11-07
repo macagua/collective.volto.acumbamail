@@ -47,3 +47,8 @@ ACCEPTANCE_TESTING = FunctionalTesting(
     ),
     name="Collective.Volto.AcumbamailLayer:AcceptanceTesting",
 )
+
+RESTAPI_TESTING = FunctionalTesting(
+    bases=(FIXTURE, WSGI_SERVER_FIXTURE),
+    name="Collective.Volto.AcumbamailLayer:RestAPITesting",
+)

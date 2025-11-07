@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<object xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+        name="portal_controlpanel"
+        purge="True"
+        i18n:domain="collective.volto.acumbamail"
+>
+
+  <!-- -*- extra stuff goes here -*- -->
+  <configlet action_id="AcumbamailSettings"
+             remove="True"
+  />
+
+</object>

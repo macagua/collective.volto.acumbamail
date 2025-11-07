@@ -13,7 +13,9 @@ class TestSetupUninstall:
         assert installer.is_product_installed(PACKAGE_NAME) is False
 
     def test_browserlayer_not_registered(self, browser_layers):
-        """Test that IBrowserLayer is not registered."""
-        from collective.volto.acumbamail.interfaces import IBrowserLayer
+        """Test that ICollectiveVoltoAcumbamailLayer is not registered."""
+        from collective.volto.acumbamail.interfaces import (
+            ICollectiveVoltoAcumbamailLayer,
+        )
 
-        assert IBrowserLayer not in browser_layers
+        assert ICollectiveVoltoAcumbamailLayer not in browser_layers

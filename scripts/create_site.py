@@ -1,5 +1,5 @@
 from AccessControl.SecurityManagement import newSecurityManager
-from collective.volto.acumbamail.interfaces import IBrowserLayer
+from collective.volto.acumbamail.interfaces import ICollectiveVoltoAcumbamailLayer
 from Products.CMFPlone.factory import _DEFAULT_PROFILE
 from Products.CMFPlone.factory import addPloneSite
 from Products.GenericSetup.tool import SetupTool
@@ -32,7 +32,7 @@ app = makerequest(globals()["app"])
 
 request = app.REQUEST
 
-ifaces = [IBrowserLayer]
+ifaces = [ICollectiveVoltoAcumbamailLayer]
 for iface in directlyProvidedBy(request):
     ifaces.append(iface)
 

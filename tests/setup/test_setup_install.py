@@ -7,10 +7,12 @@ class TestSetupInstall:
         assert installer.is_product_installed(PACKAGE_NAME) is True
 
     def test_browserlayer(self, browser_layers):
-        """Test that IBrowserLayer is registered."""
-        from collective.volto.acumbamail.interfaces import IBrowserLayer
+        """Test that ICollectiveVoltoAcumbamailLayer is registered."""
+        from collective.volto.acumbamail.interfaces import (
+            ICollectiveVoltoAcumbamailLayer,
+        )
 
-        assert IBrowserLayer in browser_layers
+        assert ICollectiveVoltoAcumbamailLayer in browser_layers
 
     def test_latest_version(self, profile_last_version):
         """Test latest version of default profile."""

@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<object name="portal_controlpanel">
+<object xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+        name="portal_controlpanel"
+        purge="False"
+        i18n:domain="collective.volto.acumbamail"
+>
 
   <!-- -*- extra stuff goes here -*- -->
+  <configlet action_id="AcumbamailSettings"
+             appId="AcumbamailSettings"
+             category="Products"
+             condition_expr=""
+             icon_expr="string:envelope-at"
+             title="Acumbamail Settings"
+             url_expr="string:${portal_url}/@@acumbamail-settings"
+             visible="True"
+             i18n:attributes="title"
+  >
+    <permission>volto.acumbamail: Manage Acumbamail Settings</permission>
+  </configlet>
 
 </object>

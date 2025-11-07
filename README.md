@@ -1,14 +1,16 @@
 # collective.volto.acumbamail
 
-An integration for the Acumbamail service with Plone
+[![Acumbamail](https://raw.githubusercontent.com/macagua/collective.volto.acumbamail/refs/heads/main/docs/docs/_static/logo.svg)](https://acumbamail.com/)
+
+An integration for the [Acumbamail](https://acumbamail.com/) service with Plone
 
 ## Features
 
-TODO: List our awesome features
+- Add a new subscriber to the Acumbamail list.
 
 ## Installation
 
-Install collective.volto.acumbamail with `pip`:
+Install `collective.volto.acumbamail` with `pip`:
 
 ```shell
 pip install collective.volto.acumbamail
