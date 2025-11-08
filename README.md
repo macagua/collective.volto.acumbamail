@@ -6,7 +6,30 @@ An integration for the [Acumbamail](https://acumbamail.com/) service with Plone
 
 ## Features
 
+- Control panel in Plone registry to manage ``Acumbamail`` settings.
+- RestApi endpoint that exposes these settings for Volto.
 - Add a new subscriber to the Acumbamail list.
+
+## @acumbamail-settings
+
+Anonymous users can't access registry resources by default with ``plone.restapi`` (there is a special permission).
+
+To avoid enabling registry access to everyone, this package exposes a dedicated RestApi route with ``Acumbamail`` settings: *@acumbamail-settings*:
+
+```shell
+curl -i http://localhost:8080/Plone/@acumbamail-settings -H 'Accept: application/json' --user admin:admin
+```
+
+## Volto integration
+
+To use this product in Volto, your Volto project needs to include a new plugin: https://github.com/macagua/volto-acumbamail
+
+## Translations
+
+This product has been translated into
+
+- English
+- Spanish
 
 ## Installation
 
@@ -21,6 +44,7 @@ And to create the Plone site:
 ```shell
 make create-site
 ```
+
 
 ## Contribute
 
