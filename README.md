@@ -10,6 +10,15 @@ An integration for the [Acumbamail](https://acumbamail.com/) service with Plone
 - RestApi endpoint that exposes these settings for Volto.
 - Add a new subscriber to the Acumbamail list.
 
+
+## Screenshot
+
+<img width="1375" alt="image" src="https://raw.githubusercontent.com/macagua/collective.volto.acumbamail/refs/heads/main/docs/images/addon-configuration-acumbamail-icon.png">
+
+---
+
+<img width="1375" alt="image" src="https://raw.githubusercontent.com/macagua/collective.volto.acumbamail/refs/heads/main/docs/images/acumbamail-settings.png">
+
 ## @acumbamail-settings
 
 Anonymous users can't access registry resources by default with ``plone.restapi`` (there is a special permission).
