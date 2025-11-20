@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.volto.acumbamail\n"
-"POT-Creation-Date: 2025-11-07 18:51+0000\n"
-"PO-Revision-Date: 2025-11-07 20:01+0100\n"
+"POT-Creation-Date: 2025-11-20 18:50+0000\n"
+"PO-Revision-Date: 2025-11-20 19:51+0100\n"
 "Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
 "Language-Team: ES <LL@li.org>\n"
 "Language: es\n"
@@ -17,13 +17,13 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.volto.acumbamail\n"
 "X-Is-Fallback-For: es-ar es-bo es-cl es-co es-cr es-do es-ec es-es es-sv es-gt es-hn es-mx es-ni es-pa es-py es-pe es-pr es-us es-uy es-ve\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.8\n"
 
 #: collective/volto/acumbamail/interfaces.py:26
 msgid "Acumbamail API Key"
 msgstr "Clave API de Acumbamail"
 
-#: collective/volto/acumbamail/controlpanels/controlpanel.py:7
+#: collective/volto/acumbamail/controlpanels/controlpanel.py:8
 msgid "Acumbamail Configuration"
 msgstr "Configuración de Acumbamail"
 
@@ -35,6 +35,10 @@ msgstr "ID de la lista de correo Acumbamail"
 msgid "Acumbamail Settings"
 msgstr "Configuración de Acumbamail"
 
+#: collective/volto/acumbamail/services/subscribe/subscribe.py:62
+msgid "Acumbamail configuration incomplete"
+msgstr "Configuración de Acumbamail incompleta"
+
 #: collective/volto/acumbamail/profiles.zcml:13
 msgid "Acumbamail integration with Plone: Install"
 msgstr "Integración de Acumbamail con Plone: Instalar"
@@ -43,7 +47,7 @@ msgstr "Integración de Acumbamail con Plone: Instalar"
 msgid "Acumbamail integration with Plone: Uninstall"
 msgstr "Barra de herramientas de depuración de Plone - Desinstalación"
 
-#: collective/volto/acumbamail/controlpanels/controlpanel.py:8
+#: collective/volto/acumbamail/controlpanels/controlpanel.py:9
 msgid "Define the credentials and connection parameters for Acumbamail."
 msgstr "Defina las credenciales y los parámetros de conexión para Acumbamail."
 
@@ -58,6 +62,14 @@ msgstr "Identificador numérico de la lista a la que se añadirán los suscripto
 #: collective/volto/acumbamail/profiles.zcml:13
 msgid "Package to configure a new Acumbamail integration with Plone site"
 msgstr "Paquete para configurar una nueva integración de Acumbamail con el sitio Plone"
+
+#: collective/volto/acumbamail/services/subscribe/subscribe.py:78
+msgid "Subscription successful"
+msgstr "Suscripción exitosa"
+
+#: collective/volto/acumbamail/services/subscribe/subscribe.py:43
+msgid "The 'email' field is required."
+msgstr "El campo 'correo electrónico' es obligatorio."
 
 #: collective/volto/acumbamail/profiles.zcml:21
 msgid "Uninstall Acumbamail integration with Plone setup."

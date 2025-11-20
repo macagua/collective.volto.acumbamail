@@ -1,3 +1,4 @@
+from collective.volto.acumbamail import _, PACKAGE_NAME
 from collective.volto.acumbamail.interfaces import ISettings
 from plone import api
 from plone.rest import Service
@@ -7,7 +8,7 @@ import logging
 import requests
 
 
-logger = logging.getLogger("collective.volto.acumbamail")
+logger = logging.getLogger(PACKAGE_NAME)
 
 # Official Acumbamail endpoint: adjust according to documentation (generic example)
 ACUMBAMAIL_API_URL = "https://acumbamail.com/api/1/addSubscriber"
@@ -39,7 +40,7 @@ class AcumbamailSubscribe(Service):
         # name = data.get("name", "")
 
         if not email:
-            raise BadRequest("The 'email' field is required.")
+            raise BadRequest(_("The 'email' field is required."))
 
         # Read credentials from the registry
         api_key = None
@@ -56,7 +57,10 @@ class AcumbamailSubscribe(Service):
 
         if not api_key or not list_id:
             logger.error("API key or list_id not configured in the Plone registry tool")
-            return {"status": "error", "message": "Acumbamail configuration incomplete"}
+            return {
+                "status": "error",
+                "message": _("Acumbamail configuration incomplete")
+            }
 
         payload = {
             "auth_token": api_key,
@@ -71,7 +75,7 @@ class AcumbamailSubscribe(Service):
             result = response.json()
             # Acumbamail's response may vary; adapt it according to the actual API.
             if isinstance(result, dict) and result.get("success"):
-                return {"status": "ok", "message": "Subscription successful"}
+                return {"status": "ok", "message": _("Subscription successful")}
             else:
                 logger.warning(f"Acumbamail responded with an error: {result}")
                 return {"status": "error", "message": f"Acumbamail: {result}"}
