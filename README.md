@@ -19,7 +19,7 @@ An integration for the [Acumbamail](https://acumbamail.com/) service with Plone
 
 <img width="720" alt="image" src="https://raw.githubusercontent.com/macagua/collective.volto.acumbamail/refs/heads/main/docs/images/acumbamail-settings.png">
 
-## @acumbamail-settings
+## Acumbamail Settings
 
 Anonymous users can't access registry resources by default with ``plone.restapi`` (there is a special permission).
 
@@ -107,10 +107,11 @@ You can add a behavior with the following command.
 make add behavior
 ```
 
-```{seealso}
+## See also:
+
 You can check the list of available subtemplates in the [`bobtemplates.plone` `README.md` file](https://github.com/plone/bobtemplates.plone/?tab=readme-ov-file#provided-subtemplates).
 See also the documentation of [Mockup and Patternslib](https://6.docs.plone.org/classic-ui/mockup.html) for how to build the UI toolkit for Classic UI.
-```
+
 
 ## License
 
