@@ -19,7 +19,7 @@ An integration for the [Acumbamail](https://acumbamail.com/) service with Plone
 
 <img width="720" alt="image" src="https://raw.githubusercontent.com/macagua/collective.volto.acumbamail/refs/heads/main/docs/images/acumbamail-settings.png">
 
-## Acumbamail Settings
+## @acumbamail-settings route
 
 Anonymous users can't access registry resources by default with ``plone.restapi`` (there is a special permission).
 
