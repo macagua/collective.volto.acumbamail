@@ -27,6 +27,7 @@ To avoid enabling registry access to everyone, this package exposes a dedicated 
 
 ```shell
 curl -i http://localhost:8080/Plone/@acumbamail-settings -H 'Accept: application/json' --user admin:admin
+curl -X POST -H "Accept: application/json" -u admin:admin http://localhost:8080/Plone/@acumbamail-settings
 ```
 
 ## Volto integration
