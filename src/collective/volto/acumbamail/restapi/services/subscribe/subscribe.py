@@ -1,3 +1,5 @@
+"""Acumbamail subscribe REST API service."""
+
 from collective.volto.acumbamail import _, logger
 from collective.volto.acumbamail.interfaces import ISettings
 from plone import api
@@ -75,7 +77,10 @@ class AcumbamailSubscribe(Service):
                 return {"status": "ok", "message": _("Subscription successful")}
             else:
                 logger.warning(f"Acumbamail responded with an error: {result}")
-                return {"status": "error", "message": f"Acumbamail: {result}"}
+                return {
+                    "status": "error",
+                    "message": _("Acumbamail: {result}").format(result=result)
+                }
         except requests.RequestException as exc:
             logger.exception("Error connecting to Acumbamail")
             return {"status": "error", "message": str(exc)}
