@@ -1,6 +1,7 @@
 """Acumbamail subscribe REST API service."""
 
-from collective.volto.acumbamail import _, logger
+from collective.volto.acumbamail import _
+from collective.volto.acumbamail import logger
 from collective.volto.acumbamail.interfaces import ISettings
 from plone import api
 from plone.rest import Service
@@ -42,9 +43,13 @@ class AcumbamailSubscribe(Service):
             raise BadRequest(_("The 'email' field is required."))
 
         # Read credentials from the registry
+        api_url = None
         api_key = None
         list_id = None
         try:
+            api_url = api.portal.get_registry_record(
+                "api_url", interface=ISettings, default="YOUR_API_URL"
+            )
             api_key = api.portal.get_registry_record(
                 "api_key", interface=ISettings, default="YOUR_API_KEY"
             )
@@ -54,11 +59,13 @@ class AcumbamailSubscribe(Service):
         except Exception:
             logger.warning("No configuration records found in Plone registry")
 
-        if not api_key or not list_id:
-            logger.error("API key or list_id not configured in the Plone registry tool")
+        if not api_url or not api_key or not list_id:
+            logger.error(
+                "API URL, API key, or list_id not configured in the Plone registry tool"
+            )
             return {
                 "status": "error",
-                "message": _("Acumbamail configuration incomplete")
+                "message": _("Acumbamail configuration incomplete"),
             }
 
         payload = {
@@ -69,7 +76,7 @@ class AcumbamailSubscribe(Service):
         }
 
         try:
-            response = requests.post(ACUMBAMAIL_API_URL, json=payload, timeout=10)
+            response = requests.post(api_url, json=payload, timeout=10)
             response.raise_for_status()
             result = response.json()
             # Acumbamail's response may vary; adapt it according to the actual API.
@@ -79,7 +86,7 @@ class AcumbamailSubscribe(Service):
                 logger.warning(f"Acumbamail responded with an error: {result}")
                 return {
                     "status": "error",
-                    "message": _("Acumbamail: {result}").format(result=result)
+                    "message": _("Acumbamail: {result}").format(result=result),
                 }
         except requests.RequestException as exc:
             logger.exception("Error connecting to Acumbamail")

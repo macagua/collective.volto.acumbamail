@@ -19,7 +19,13 @@ class ISettings(model.Schema):
     model.fieldset(
         "general",
         label=_("General settings"),
-        fields=["api_key", "list_id"],
+        fields=["api_url", "api_key", "list_id"],
+    )
+
+    api_url = schema.TextLine(
+        title=_("Acumbamail API URL"),
+        description=_("The URL of the Acumbamail API endpoint."),
+        required=True,
     )
 
     api_key = schema.TextLine(
