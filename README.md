@@ -10,7 +10,16 @@ An integration for the [Acumbamail](https://acumbamail.com/) service with Plone
 - RestApi endpoint that exposes these settings for Volto.
 - Add a new subscriber to the Acumbamail list.
 
-## @acumbamail-settings
+
+## Screenshot
+
+<img width="290" alt="image" src="https://raw.githubusercontent.com/macagua/collective.volto.acumbamail/refs/heads/main/docs/images/addon-configuration-acumbamail-icon.png">
+
+---
+
+<img width="720" alt="image" src="https://raw.githubusercontent.com/macagua/collective.volto.acumbamail/refs/heads/main/docs/images/acumbamail-settings.png">
+
+## @acumbamail-settings route
 
 Anonymous users can't access registry resources by default with ``plone.restapi`` (there is a special permission).
 
@@ -18,6 +27,7 @@ To avoid enabling registry access to everyone, this package exposes a dedicated 
 
 ```shell
 curl -i http://localhost:8080/Plone/@acumbamail-settings -H 'Accept: application/json' --user admin:admin
+curl -X POST -H "Accept: application/json" -u admin:admin http://localhost:8080/Plone/@acumbamail-settings
 ```
 
 ## Volto integration
@@ -98,10 +108,11 @@ You can add a behavior with the following command.
 make add behavior
 ```
 
-```{seealso}
+## See also:
+
 You can check the list of available subtemplates in the [`bobtemplates.plone` `README.md` file](https://github.com/plone/bobtemplates.plone/?tab=readme-ov-file#provided-subtemplates).
 See also the documentation of [Mockup and Patternslib](https://6.docs.plone.org/classic-ui/mockup.html) for how to build the UI toolkit for Classic UI.
-```
+
 
 ## License
 
