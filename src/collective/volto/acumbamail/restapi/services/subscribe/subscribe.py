@@ -1,14 +1,11 @@
-from collective.volto.acumbamail import _, PACKAGE_NAME
+from collective.volto.acumbamail import _, logger
 from collective.volto.acumbamail.interfaces import ISettings
 from plone import api
 from plone.rest import Service
 from zExceptions import BadRequest
 
-import logging
 import requests
 
-
-logger = logging.getLogger(PACKAGE_NAME)
 
 # Official Acumbamail endpoint: adjust according to documentation (generic example)
 ACUMBAMAIL_API_URL = "https://acumbamail.com/api/1/addSubscriber"

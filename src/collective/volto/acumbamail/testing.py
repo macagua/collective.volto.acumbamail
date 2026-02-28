@@ -6,6 +6,7 @@ from plone.app.testing import IntegrationTesting
 from plone.app.testing import PloneSandboxLayer
 from plone.testing.zope import WSGI_SERVER_FIXTURE
 
+from collective.volto.acumbamail import PACKAGE_NAME
 import collective.volto.acumbamail
 
 
@@ -22,7 +23,7 @@ class Layer(PloneSandboxLayer):
         self.loadZCML(package=collective.volto.acumbamail)
 
     def setUpPloneSite(self, portal):
-        applyProfile(portal, "collective.volto.acumbamail:default")
+        applyProfile(portal, f"{PACKAGE_NAME}:default")
 
 
 FIXTURE = Layer()
