@@ -19,15 +19,14 @@ An integration for the [Acumbamail](https://acumbamail.com/) service with Plone
 
 <img width="720" alt="image" src="https://raw.githubusercontent.com/macagua/collective.volto.acumbamail/refs/heads/main/docs/images/acumbamail-settings.png">
 
-## @acumbamail-settings route
+## @acumbamail-subscribe route
 
 Anonymous users can't access registry resources by default with ``plone.restapi`` (there is a special permission).
 
 To avoid enabling registry access to everyone, this package exposes a dedicated RestApi route with ``Acumbamail`` settings: *@acumbamail-settings*:
 
 ```shell
-curl -i http://localhost:8080/Plone/@acumbamail-settings -H 'Accept: application/json' --user admin:admin
-curl -X POST -H "Accept: application/json" -u admin:admin http://localhost:8080/Plone/@acumbamail-settings
+curl -i -X POST http://localhost:8080/Plone/@acumbamail-subscribe -H "Accept: application/json" -H "Accept-Language: es" --data '{"email": "leonardocaballero@gmail.com"}' --user admin:admin
 ```
 
 ## Volto integration
