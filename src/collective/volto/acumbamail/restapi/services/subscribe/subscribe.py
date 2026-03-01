@@ -72,6 +72,7 @@ class AcumbamailSubscribe(Service):
                 "message": _("Acumbamail configuration incomplete"),
             }
 
+        full_url = f"{api_url}/?auth_token={api_key}&list_id={list_id}&double_optin=1"
         payload = {
             "auth_token": api_key,
             "list_id": list_id,
