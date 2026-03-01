@@ -8,7 +8,7 @@ An integration for the [Acumbamail](https://acumbamail.com/) service with Plone
 
 - Control panel in Plone registry to manage ``Acumbamail`` settings.
 - RestApi endpoint that exposes these settings for Volto.
-- Add a new subscriber to the Acumbamail list.
+- Add a [new subscriber](https://acumbamail.com/apidoc/function/addSubscriber/) to the Acumbamail list.
 
 
 ## Screenshot
@@ -28,6 +28,14 @@ To avoid enabling registry access to everyone, this package exposes a dedicated 
 ```shell
 curl -i -X POST http://localhost:8080/Plone/@acumbamail-subscribe -H "Accept: application/json" -H "Accept-Language: es" --data '{"email": "leonardocaballero@gmail.com"}' --user admin:admin
 ```
+
+The Official API Acumbamail
+
+- https://acumbamail.com/apidoc/
+
+The Acumbamail endpoints that using:
+
+- [addSubscriber](https://acumbamail.com/apidoc/function/addSubscriber/)
 
 ## Volto integration
 
