@@ -54,6 +54,8 @@ class AcumbamailSubscribe(Service):
             api_url = api.portal.get_registry_record(
                 "api_url", interface=ISettings, default="YOUR_API_URL"
             )
+            if api_url.endswith("/"):
+                api_url = api_url[:-1]
             api_key = api.portal.get_registry_record(
                 "api_key", interface=ISettings, default="YOUR_API_KEY"
             )
@@ -72,7 +74,8 @@ class AcumbamailSubscribe(Service):
                 "message": _("Acumbamail configuration incomplete"),
             }
 
-        full_url = f"{api_url}/?auth_token={api_key}&list_id={list_id}&double_optin=1"
+        # Construct the API endpoint URL and payload for subscribing the user.
+        full_url = f"{api_url}/addSubscriber/?auth_token={api_key}&list_id={list_id}&double_optin=1"  # noqa: E501
         payload = {
             "auth_token": api_key,
             "list_id": list_id,
