@@ -25,14 +25,13 @@ class AcumbamailSubscribe(Service):
 
         # If the data is bytes, decode it and parse as JSON
         import json
+
         if isinstance(data, bytes):
             data = json.loads(data.decode("utf-8"))
 
         # If Plone/Volto sends JSON correctly, use request.get_json() alternatively.
         if hasattr(self.request, "body") and self.request.body:
             try:
-                import json
-
                 data = json.loads(self.request.body.decode("utf-8"))
             except Exception:
                 data = data or {}
