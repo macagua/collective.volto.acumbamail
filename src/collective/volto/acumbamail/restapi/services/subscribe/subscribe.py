@@ -4,14 +4,10 @@ from collective.volto.acumbamail import _
 from collective.volto.acumbamail import logger
 from collective.volto.acumbamail.interfaces import ISettings
 from plone import api
-from plone.rest import Service
+from plone.restapi.services import Service
 from zExceptions import BadRequest
 
 import requests
-
-
-# Official Acumbamail endpoint: adjust according to documentation (generic example)
-ACUMBAMAIL_API_URL = "https://acumbamail.com/api/1/addSubscriber"
 
 
 class AcumbamailSubscribe(Service):
@@ -27,6 +23,11 @@ class AcumbamailSubscribe(Service):
         except Exception:
             data = {}
 
+        # If the data is bytes, decode it and parse as JSON
+        import json
+        if isinstance(data, bytes):
+            data = json.loads(data.decode("utf-8"))
+
         # If Plone/Volto sends JSON correctly, use request.get_json() alternatively.
         if hasattr(self.request, "body") and self.request.body:
             try:
@@ -41,6 +42,9 @@ class AcumbamailSubscribe(Service):
 
         if not email:
             raise BadRequest(_("The 'email' field is required."))
+
+        # if not name:
+        #     raise BadRequest(_("The 'name' field is required."))
 
         # Read credentials from the registry
         api_url = None
@@ -76,8 +80,13 @@ class AcumbamailSubscribe(Service):
         }
 
         try:
-            response = requests.post(api_url, json=payload, timeout=10)
+            # Note: The actual API endpoint and payload structure may differ based on
+            # Acumbamail's API documentation.
+            response = requests.post(full_url, json=payload, timeout=10)
+            # Check if the request was successful (status code 200-299)
             response.raise_for_status()
+            # Parse the response from Acumbamail and determine if the subscription
+            # was successful.
             result = response.json()
             # Acumbamail's response may vary; adapt it according to the actual API.
             if isinstance(result, dict) and result.get("success"):
