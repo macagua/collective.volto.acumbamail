@@ -17,7 +17,7 @@ PAPEROPT_letter = -D latex_paper_size=letter
 ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) $(DOCS_DIR)
 VALEFILES       := $(shell find $(DOCS_DIR) -type f -name "*.md" -print)
 VALEOPTS        ?=
-PYTHONVERSION   = >=3.11,<3.14
+PYTHONVERSION   = >=3.11,<3.13
 
 # Add the following 'help' target to your Makefile
 # And add help text after each target name starting with '\#\#'
