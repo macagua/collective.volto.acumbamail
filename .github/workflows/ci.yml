@@ -18,6 +18,11 @@ jobs:
         run: |
           echo 'python-version=${{ env.python-version }}'
           echo 'plone-version=${{ env.plone-version }}'
+      - name: Install system dependencies for lxml
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            build-essential pkg-config python3-dev libxml2-dev libxslt1-dev
 
   lint:
     name: "Backend: Lint"
