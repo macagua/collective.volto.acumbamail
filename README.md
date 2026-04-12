@@ -48,6 +48,10 @@ This product has been translated into
 - English
 - Spanish
 
+## Compatibility
+
+- Tested with Python 3.12 and Plone 6.1.4.
+
 ## Installation
 
 Install `collective.volto.acumbamail` with `pip`:
@@ -61,7 +65,6 @@ And to create the Plone site:
 ```shell
 make create-site
 ```
-
 
 ## Contribute
 
