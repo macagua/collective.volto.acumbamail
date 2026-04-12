@@ -5,6 +5,11 @@
 
   <include package="plone.restapi" />
 
+  <adapter
+      factory=".controlpanels.AcumbamailSettingsControlpanel"
+      name="acumbamail-settings"
+      />
+
   <!-- <include package=".deserializer" /> -->
   <include package=".services" />
   <!-- <include package=".serializer" /> -->
