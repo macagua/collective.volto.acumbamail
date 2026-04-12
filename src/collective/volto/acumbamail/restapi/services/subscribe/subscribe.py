@@ -88,9 +88,11 @@ class AcumbamailSubscribe(Service):
             response = requests.post(full_url, json=payload, timeout=10)
             # Check if the request was successful (status code 200-299)
             response.raise_for_status()
-            # Parse the response from Acumbamail and determine if the subscription
-            # was successful.
-            result = response.json()
+            # Check if the response is JSON before trying to parse it
+            if "application/json" in response.headers.get("Content-Type", ""):
+                # Parse the response from Acumbamail and determine if the subscription
+                # was successful.
+                result = response.json()
             # Acumbamail's response may vary; adapt it according to the actual API.
             if isinstance(result, dict) and result.get("success"):
                 return {"status": "ok", "message": _("Subscription successful")}
