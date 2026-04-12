@@ -14,7 +14,7 @@ class AcumbamailSubscribe(Service):
     """REST Service: POST -> /Plone/@acumbamail-subscribe
     This service for subscribing users to Acumbamail mailing list."""
 
-    def reply(self):
+    def reply(self):  # noqa: C901
         """Subscribe a user to Acumbamail mailing list."""
 
         # `self.request` already contains the JSON parameters
