@@ -2,11 +2,11 @@
 try:
     __import__("pkg_resources").declare_namespace(__name__)
 except ImportError:
-    import sys
     from pkgutil import extend_path
 
-    __path__[:] = extend_path(__path__, __name__)
+    import sys
 
+    __path__[:] = extend_path(__path__, __name__)
 
     def __getattr__(name):
         fullname = f"{__name__}.{name}"
