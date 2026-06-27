@@ -15,11 +15,15 @@ An integration for the [Acumbamail](https://acumbamail.com/) service with Plone
 
 ## Screenshot
 
-<img width="290" alt="image" src="https://raw.githubusercontent.com/macagua/collective.volto.acumbamail/refs/heads/main/docs/images/addon-configuration-acumbamail-icon.png">
+**Add-on Configuration Access**
+
+<img width="290" alt="image" src="https://raw.githubusercontent.com/macagua/collective.volto.acumbamail/refs/heads/main/docs/docs/images/addon-configuration-acumbamail-icon.png">
 
 ---
 
-<img width="720" alt="image" src="https://raw.githubusercontent.com/macagua/collective.volto.acumbamail/refs/heads/main/docs/images/acumbamail-settings.png">
+**Acumbamail Settings control panel**
+
+<img width="720" alt="image" src="https://raw.githubusercontent.com/macagua/collective.volto.acumbamail/refs/heads/main/docs/docs/images/acumbamail-settings.png">
 
 ## @acumbamail-subscribe route
 
@@ -41,7 +45,7 @@ The Acumbamail endpoints that using:
 
 ## Volto integration
 
-To use this product in Volto, your Volto project needs to include a new plugin: https://github.com/macagua/volto-acumbamail
+To use this product in Volto, your Volto project needs to include a new add-on: https://github.com/macagua/volto-acumbamail
 
 ## Translations
 
