@@ -17,13 +17,13 @@ An integration for the [Acumbamail](https://acumbamail.com/) service with Plone
 
 **Add-on Configuration Access**
 
-<img width="290" alt="image" src="https://raw.githubusercontent.com/macagua/collective.volto.acumbamail/refs/heads/main/docs/docs/images/addon-configuration-acumbamail-icon.png">
+<img width="290" alt="image" src="https://raw.githubusercontent.com/macagua/collective.volto.acumbamail/refs/heads/main/docs/images/addon-configuration-acumbamail-icon.png">
 
 ---
 
 **Acumbamail Settings control panel**
 
-<img width="720" alt="image" src="https://raw.githubusercontent.com/macagua/collective.volto.acumbamail/refs/heads/main/docs/docs/images/acumbamail-settings.png">
+<img width="720" alt="image" src="https://raw.githubusercontent.com/macagua/collective.volto.acumbamail/refs/heads/main/docs/images/acumbamail-settings.png">
 
 ## @acumbamail-subscribe route
 
